@@ -1,0 +1,191 @@
+/* --------------------------------------------------------- */
+/* Estilos para la sección de Market Información de los ODS */
+.market-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+.market-text {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.market-text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.market-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.market-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E76A24;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.market-button:hover {
+    background-color: #d9591d;
+}
+
+.market-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.market-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------- */
+/* Estilos para la sección de Salón - sección 2 */
+.salon-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+.salon-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.salon-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.salon-text {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+}
+
+.salon-text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.salon-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.salon-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E76A24;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.salon-button:hover {
+    background-color: #d9591d;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.nav-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle-btn ion-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .nav-toggle-btn {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    .market-section, .salon-section {
+        flex-direction: row;
+        padding: 50px;
+    }
+
+    .market-text, .salon-text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .market-text {
+        padding-right: 20px;
+    }
+
+    .salon-text {
+        padding-left: 20px;
+    }
+
+    .market-image, .salon-image {
+        width: 45%;
+    }
+
+    .market-text h2, .salon-text h2 {
+        font-size: 3rem;
+    }
+
+    .market-text p, .salon-text p {
+        font-size: 1.5rem;
+    }
+
+    .market-button, .salon-button {
+        font-size: 1.2rem;
+    }
+}

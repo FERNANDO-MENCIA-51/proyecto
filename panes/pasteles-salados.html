@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raices Cañetanas</title>
+    <link rel="stylesheet" href="/css/RC.css">
+    <link rel="stylesheet" href="panes/css/pasteles-salados.css">
+</head>
+<!-- Sección del Navbar -->
+
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo -->
+            <a href="/html/RC.html" class="logo">RAICES CAÑETANAS</a>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="/html/RC.html" class="nav-link active">Inicio</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Tienda Online</a>
+                <ul class="submenu">
+                    <li><a href="/panes/panaderia.html" class="submenu-link">Panadería</a></li>
+                    <li><a href="/panes/postres.html" class="submenu-link">Postres</a></li>
+                    <li><a href="/panes/pasteles-salados.html" class="submenu-link">Pasteles Salados</a></li>
+                    <li><a href="/panes/bolleria.html" class="submenu-link">Bollería</a></li>
+                </ul>
+            </li>
+            <li><a href="/Dashboard.html" class="nav-link salir-btn">Salir</a></li>
+            <li>
+                <span class="cart-icon" onclick="toggleCart()">🛒 <span class="cart-count"
+                        id="cart-count">0</span></span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Seccion de galeria de pasteles salados -->
+    <section class="galeria-postres">
+        <h2>pasteles Salados</h2>
+        <div class="productos">
+            <!-- Producto 1 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/quiche-lorraine-porcion.webp" alt="Quiche Lorraine porción">
+                <h3>Quiche Lorraine porción</h3>
+                <p>S/ 14.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Quiche Lorraine porción', 14)">Agregar al
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/pastel-acelga.webp" alt="Pastel de acelga">
+                <h3>Pastel de acelga</h3>
+                <p>S/ 18.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Pastel de acelga', 18)">Agregar al
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/tortilla-españa-porcion.webp" alt="Tortilla en España porción">
+                <h3>Tortilla en España porción</h3>
+                <p>S/ 16.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Tortilla en España porción', 16)">Agregar al
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/quiche-lorraine-molde.webp" alt="Quiche Lorraine molde">
+                <h3>Quiche Lorraine molde</h3>
+                <p>S/ 16.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Quiche Lorraine molde', 16)">Agregar al
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/pastel-acelga-molde-entero.webp" alt="Pastel de acelga molde entero">
+                <h3>Pastel de acelga molde entero</h3>
+                <p>S/ 18.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Pastel de acelga molde entero', 18)">Agregar al
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto-item">
+                <img src="/pasteles-salados/tortilla-españa-molde-entero.webp" alt="Tortilla en España molde entero">
+                <h3>Tortilla en España molde entero</h3>
+                <p>S/ 18.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Tortilla en España molde entero', 18)">Agregar al
+                    carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- Detalles del Carrito -->
+    <div class="cart-details" id="cart-details">
+        <h3>🛒 Carrito de compras</h3>
+        <div id="cart-items" class="cart-items"></div>
+        <p class="cart-total">💰 Total: S/ <span id="cart-total">0</span></p>
+        <button class="finalize-btn" onclick="finalizePurchase()">🌌 Finalizar compra</button>
+    </div>
+
+
+
+    <!-- Seccion de Pie de Pagina -->
+
+    <!-- Archivo JS -->
+    <script src="panes/js/pasteles-salados.js"></script>
+    <script src="/js/RC.js"></script>
+</body>
+
+</html>

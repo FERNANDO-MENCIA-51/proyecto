@@ -1,0 +1,160 @@
+/* Estilos para la sección de ODS */
+.ods-details {
+    background-color: #1a1a1a;
+    padding: 4rem 2rem;
+    color: #ffffff;
+}
+
+.ods-details h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #00ff9d;
+    text-transform: uppercase;
+}
+
+.ods-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ods-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.ods-intro h3 {
+    color: #00ccff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ods-intro p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.ods-button {
+    background: linear-gradient(45deg, #00ff9d, #00ccff);
+    border: none;
+    padding: 1rem 2rem;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ods-button:hover {
+    transform: scale(1.05);
+}
+
+.ods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.ods-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.ods-item:hover {
+    transform: translateY(-10px);
+}
+
+.ods-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ods-item:hover img {
+    transform: scale(1.1);
+}
+
+.ods-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff9d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.ods-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.ods-item:hover .ods-overlay {
+    transform: translateY(0);
+}
+
+.ods-overlay h4 {
+    color: #00ccff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ods-overlay p {
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ods-details {
+        padding: 2rem 1rem;
+    }
+    
+    .ods-details h1 {
+        font-size: 2rem;
+    }
+    
+    .ods-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .ods-item img {
+        height: 250px;
+    }
+    
+    .ods-overlay {
+        padding: 1.5rem;
+    }
+    
+    .ods-overlay h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ods-details h1 {
+        font-size: 1.5rem;
+    }
+    
+    .ods-intro h3 {
+        font-size: 1.5rem;
+    }
+    
+    .ods-grid {
+        grid-template-columns: 1fr;
+    }
+}
